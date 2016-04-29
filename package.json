@@ -10,11 +10,12 @@
     "browserify": "./node_modules/.bin/browserify src/index.js -t babelify -v -o tmp/bundle.js",
     "postbrowserify": "cat polyfills/Object.defineProperty.js > dist/index.js; cat node_modules/es5-shim/es5-shim.js >> dist/index.js; cat node_modules/es5-shim/es5-sham.js >> dist/index.js; cat tmp/bundle.js >> dist/index.js;"
   },
-    "browserify": {
-    "transform": [ "commandify" ]
+  "browserify": {
+    "transform": [
+      "commandify"
+    ]
   },
-    "commandify": " npm run postbrowserify",
-
+  "commandify": " npm run postbrowserify",
   "keywords": [
     "extendscript",
     "es6",
@@ -24,6 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.7.7",
+    "babel-polyfill": "^6.7.4",
     "babel-preset-es2015": "^6.6.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.0",
