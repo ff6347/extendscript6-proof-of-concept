@@ -39,5 +39,7 @@ watchify watch task:
     
     npm run watchify
 
+## Todos
 
+- [ ] Make commandify only run on watchify not on browserify 
 
